@@ -68,23 +68,23 @@ def classify_grade(number_grade):
 # In[12]:
 
 
-x = float(input("Enter number grade to convert into a letter grade"))
-def lettergrade(x):
-    if x>=92:
+number_grade = float(input("Enter number grade to convert into a letter grade"))
+def classify_grade(number_grade):
+    if number_grade>=92:
         return 'A'
-    elif x>=86:
+    elif number_grade>=86:
         return 'B+'
-    elif x>=80:
+    elif number_grade>=80:
         return 'B'
-    elif x>=74:
+    elif number_grade>=74:
         return 'C+'
-    elif x>=67:
+    elif number_grade>=67:
         return 'C'
-    elif x>=60:
+    elif number_grade>=60:
         return 'D'
     elif x>=0:
         return 'F'
-print(lettergrade(x))
+print(classify_grade(x))
 
 
 def average_weight(item_quantity_1, item_weight_1, item_quantity_2, item_weight_2):
