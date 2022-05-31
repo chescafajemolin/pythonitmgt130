@@ -229,50 +229,35 @@ def make_change(amount):
 
 # In[ ]:
 
+i= int(input("Enter the amount, in centavos, to make change for "))
 
-amount = float(input("Enter amount to make change for:"))
+def make_change(i):
+    a = 0
+    b = 0
+    c = 0
+    d = 0
+    e = 0
+    
+    if i>=100:
+                a = i/100
+                i %= 100
 
-calculate_25C = amount//25
-print ("25C:",str(calculate_25C))
-amount = amount%25
+    if i>=25:
+                b = i/25
+                i %= 25
+    
+    if i>=10:
+                c = i/10
+                i %=10
+    
+    if i>=5:
+                d = i/5
+                i %= 5
+    
+    if i>0:
+                e = i/1
+                i = 0
 
-calculate_10C = amount//10
-print ("10C:",str(calculate_10C))
-amount = amount%10
-
-
-# In[90]:
-
-
-a = float(input("Enter amount to make change for:"))
-
-P1 = int(a)
-
-print("1P:",P1)
-
-b = round(a-(a//1),2)
-
-print(b)
-
-b_cents =int((b)*100)
-
-print(b_cents)
-
-C25 = int(b_cents//25)
-
-print("25C:", C25)
-
-b_cents-=C25*25
-
-C10 = int(b_cents//10)
-print("10C:", C10)
-
-b_cents-=C10*10
-
-C5 = int(b_cents//5)
-print("5C:", C5)
-
-b_cents-=C5*5
-
-print("1C:",b_cents)
-
+    return " 1P: %i / 25C: %i / 10C: %i / 5C: %i / 1C: %i " %(a , b, c, d, e)
+    
+print(make_change(i))
