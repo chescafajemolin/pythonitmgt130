@@ -143,7 +143,7 @@ def diagonal(board):
 
 column_board = [list(i) for i in zip(*board)]
 
-def column(board):
+def tic_tac_toe(board):
     for column in column_board:
         win = row(column_board) or diagonal(board)
         if win:
@@ -151,7 +151,7 @@ def column(board):
         else:
             return "No Winner"
 
-print(column(board))
+print(tic_tac_toe(board))
 
 
 # ###### def eta(first_stop, second_stop, route_map):
